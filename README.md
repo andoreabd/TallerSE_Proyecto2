@@ -14,7 +14,34 @@ python emotions.py --mode display
 ```
 En la carpeta que se corre el comando debe estar el documento *haarcascade_frontalface_default.xml*
 ## Recetas
-
+### bblayer
+```
+BBLAYERS ?= " \
+  /home/gh/poky/meta \
+  /home/gh/poky/meta-poky \
+  /home/gh/poky/meta-yocto-bsp \
+  /home/gh/poky/meta-openembedded/meta-oe \
+  /home/gh/poky/meta-openembedded/meta-python \
+  /home/gh/poky/meta-openembedded/meta-xfce \
+  /home/gh/poky/meta-openembedded/meta-gnome \
+  /home/gh/poky/meta-openembedded/meta-multimedia \
+  /home/gh/poky/meta-openembedded/meta-networking \
+  /home/gh/poky/meta-raspberrypi \
+  /home/gh/poky/meta-tensorflow-lite \
+```
+### local.conf
+```
+IMAGE_INSTALL:append = " \
+                sudo \
+                python3 \
+                python3-pip \
+                xf86-video-fbdev \
+                vim \
+                git \
+                packagegroup-core-x11 \
+                packagegroup-xfce-base \
+                python3-tensorflow-lite \
+```
 ### Referencia:
 [https://github.com/atulapra/Emotion-detection]
 [https://www.kaggle.com/datasets/msambare/fer2013]
