@@ -1,18 +1,20 @@
 # TallerSE_Proyecto2
-## Dependencias
+## Modelo de reconocimiento de emociones
+### Dependencias
 Se utiliza Python, OpenCV, TensorFlow
-## Entrenamiento de modelo de reconocimiento de emociones
+### Entrenamiento de modelo de reconocimiento de emociones
 Se necesitan imágenes para entrenar el modelo de FER-2013 y correr el script llamado *Emotions.py* con:
 ```
 python emotions.py --mode train
 ```
 Se genera un file llamado *model.h5* que se puede probar con la cámara de la computadora.
-## Prueba del modelo
+### Prueba del modelo
 Para probar que funcione en la computadora hay que correr:
 ```
 python emotions.py --mode display
 ```
 En la carpeta que se corre el comando debe estar el documento *haarcascade_frontalface_default.xml*
+## Configuración de la imagen
 ## Recetas
 ### bblayer
 ```
